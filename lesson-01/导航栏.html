@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>导航栏</title>
+	<style>
+		/* 去掉浏览器默认样式 */
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		a {
+			/* 去掉A标签下划线 */
+			text-decoration: none;
+		}
+
+		body {
+			/* 默认字体大小 */
+			font-size: 12px; 
+			/* 默认行高 */
+			line-height: 1.5;
+			/* 使用的字体 */
+			font-family: tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+			/* 默认文字颜色 */
+			color: #3C3C3C;
+		}
+
+		.site-nav {
+			z-index: 10000;
+			width: 100%;
+			background-color: #f5f5f5;
+			border-bottom: 1px solid #eee;
+		}
+		.site-nav-body {
+			height: 35px;
+		}
+
+		.ctrl {
+			margin: 0 auto;
+			width: 1190px;
+		}
+
+		.site-nav-left {
+			float: left;
+		}
+		.site-nav-body li {
+			float: left;
+			padding: 0 6px;
+			height: 35px;
+    		line-height: 35px;
+			color: #6C6C6C;
+		}
+		.site-nav-body li a {
+			color: #6C6C6C;
+		}
+		.site-nav-body li .nav-menu-arrow {
+			background: url('./assets/arrow-icon.png') no-repeat center right;
+			background-size: 12px 12px;
+			padding-right: 16px;
+		}
+
+		.site-nav-body .red-color {
+			color: #f22e00;
+		}
+
+
+		.site-nav-right {
+			float: right;
+		}
+
+		.site-nav-body .shop-item > .shop-cart-icon,
+		.site-nav-body .shop-item > a {
+			float: left;
+		}
+		.site-nav-body .shop-item .shop-cart-icon {
+			width: 15px;
+			height: 15px;
+			background: url('./assets/shop-cart-icon.png') no-repeat center right;
+			background-size: 15px 15px;
+			margin-top: 10px;
+			margin-right: 2px;
+		}
+
+		/* 搜索 */
+		.search-ctrl {
+			overflow: hidden;
+			padding-top: 24px;
+		}
+		.search-ctrl .logo {
+			float: left;
+			width: 142px;
+			margin-top: 10px;
+		}
+		.search-ctrl .logo img {
+			width: 100%;
+		}
+
+		.search-body {
+			margin-left: 258px;
+    		margin-right: 302px;
+			width: 630px;
+		}
+		.search-input-box {
+			overflow: hidden;
+			position: relative;
+		}
+		
+		.search-input-panel {
+			border: 2px solid #ff5000;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+			border-right: none;
+			overflow: hidden;
+			height: 36px;
+			margin-right: 74px;
+		}
+		.search-input-panel .search-icon {
+			float: left;
+			width: 30px;
+			display: block;
+			margin: 5px 5px 0;
+		}
+		.search-input-panel .search-input {
+			border: none;
+			height: 100%;
+			float: left;
+			width: 480px;
+			outline: none;
+		}
+		.search-button {
+			font-size: 18px;
+			font-weight: 700;
+			color: #FFF;
+			background-color: #FF4200;
+			cursor: pointer;
+			height: 100%;
+			border: none;
+			width: 74px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			outline: none;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+
+		.search-nav {
+			overflow: hidden;
+			height: 22px;
+			margin-left: 17px;
+		}
+		.search-nav > li {
+			color: #F40;
+			text-align: center;
+			float: left;
+			width: 36px;
+			height: 22px;
+			line-height: 22px;
+			margin-right: 4px;
+			cursor: pointer;
+		}
+		.search-nav > li:hover {
+			background-color: #FFEEE5;
+    		color: #FF5400;
+		}
+		.search-nav > li.active {
+			background-color: #ff9000;
+			border-top-right-radius: 6px;
+			border-top-left-radius: 6px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+
+		图标可以在此网站下载
+		https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2
+
+	 -->
+	<div class="site-nav">
+		<div class="site-nav-body ctrl">
+			<ul class="site-nav-left">
+				<li>
+					<div class="nav-menu-hd nav-menu-arrow">
+						中国大陆
+					</div>
+				</li>
+				<li>
+					<a class="nav-menu-hd red-color" href="###">
+						亲，请登录
+					</a>
+				</li>
+				<li>
+					<a class="nav-menu-hd" href="###">
+						免费注册
+					</a>
+				</li>
+			</ul>
+
+			<ul class="site-nav-right">
+					<li>
+						<a class="nav-menu-hd nav-menu-arrow" href="###">
+							我的淘宝
+						</a>
+					</li>
+					<li class="shop-item">
+						<span class="shop-cart-icon"></span>
+						<a class="nav-menu-hd nav-menu-arrow" href="###">
+							购物车<span class="red-color">0</span>
+						</a>
+					</li>
+					<li>
+						<a class="nav-menu-hd" href="###">
+							商品分类
+						</a>
+					</li>
+					<li>
+						<a class="nav-menu-hd nav-menu-arrow" href="###">
+							联系客服
+						</a>
+					</li>
+				</ul>
+		</div>
+	</div>
+
+	<div class="search-ctrl ctrl">
+		<div class="logo">
+			<a href="###"><img src="./assets//logo-icon.png" alt=""></a>
+		</div>
+		<div class="search-body">
+			<ul class="search-nav">
+				<li class="active">宝贝</li>
+				<li>天猫</li>
+				<li>店铺</li>
+			</ul>
+			<div class="search-input-box">
+				<div class="search-input-panel">
+					<img src="./assets/search-icon.png" class="search-icon" alt="">
+					<input class="search-input" placeholder="请输入搜索关键词" type="text">
+				</div>
+				<button class="search-button">搜索</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
